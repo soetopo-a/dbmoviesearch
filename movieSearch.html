@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Top 9 Movies</title>
+  <link rel="stylesheet" href="styles.css?v=1.0">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
+  <h1>Movie Search</h1>
+  <div id="query">
+    Genre:
+    <!-- Genre Source: https://developers.themoviedb.org/3/genres/get-movie-list -->
+    <select id="genre">
+      <option value="28">Action</option>
+      <option value="12">Adventure</option>
+      <option value="16">Animation</option>
+      <option value="35">Comedy</option>
+      <option value="80">Crime</option>
+      <option value="99">Documentary</option>
+      <option value="18">Drama</option>
+      <option value="10751">Family</option>
+      <option value="14">Fantasy</option>
+      <option value="36">History</option>
+      <option value="27">Horror</option>
+      <option value="10402">Music</option>
+    </select>
+    Year Released: <input type="text" id="year" />
+    <button type="button" id="findThatFilm">Go!</button>
+  </div>
+  <div id="movies">
+    <img id="movieImg0" src="http://www.kevingage.com/assets/clapboard.png" />      
+    <img id="movieImg1" src="http://www.kevingage.com/assets/clapboard.png" />
+    <img id="movieImg2" src="http://www.kevingage.com/assets/clapboard.png" />
+    <img id="movieImg3" src="http://www.kevingage.com/assets/clapboard.png" />
+    <img id="movieImg4" src="http://www.kevingage.com/assets/clapboard.png" />
+    <img id="movieImg5" src="http://www.kevingage.com/assets/clapboard.png" />
+    <img id="movieImg6" src="http://www.kevingage.com/assets/clapboard.png" />
+    <img id="movieImg7" src="http://www.kevingage.com/assets/clapboard.png" />
+    <img id="movieImg8" src="http://www.kevingage.com/assets/clapboard.png" />
+  </div>
+</body>
+</html>

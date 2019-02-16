@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Search Application</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='css/wvjxgv.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
+	<script src="scripts.js"></script>
+	
+
+	  <div class="wrapper">
+	<div class="titleDesc" align="center">
+	</div>
+	<div class="desc">
+		<h1>Movie Search</h1>
+		<p>This application will give you the top 9 movies of the year for your desired genre and year!</p>
+
+		<div class="todo">
+			<span>From here, you can:</span>
+			<ul>
+				<li>Hover over the movie to read the overview.</li>
+				<li>Select a movie and click to see more information on it.</li>
+				<li>Find links to purchase/stream/rent the movie!</li>
+			</ul>
+		</div>
+		<p></p>
+		<p></p>
+		<div id="query" align="center">
+				Genre:
+				<!-- Genre Source: https://developers.themoviedb.org/3/genres/get-movie-list -->
+				<select id="genre">
+					<option value="28">Action</option>
+					<option value="12">Adventure</option>
+					<option value="16">Animation</option>
+					<option value="35">Comedy</option>
+					<option value="80">Crime</option>
+					<option value="99">Documentary</option>
+					<option value="18">Drama</option>
+					<option value="10751">Family</option>
+					<option value="14">Fantasy</option>
+					<option value="36">History</option>
+					<option value="27">Horror</option>
+					<option value="10402">Music</option>
+				</select>
+				Year Released: <input type="text" id="year" />
+				<button type="button" id="findThatFilm">Search</button>
+			</div>
+	</div>
+
+	<div class="content">
+		<!-- content here -->
+		<div class="product-grid product-grid--flexbox">
+			<div class="product-grid__wrapper">
+				<!-- Product list start here -->
+
+				<!-- Single product -->
+				<div class="product-grid__product-wrapper">
+					<div class="product-grid__product">
+						<div class="product-grid__img-wrapper">			
+							<img id="movieImg0" src="http://www.kevingage.com/assets/clapboard.png" alt="Img" class="product-grid__img" />
+						</div>
+						<span id="movieName0" class="product-grid__title">Movie title</span>
+						<p></p>
+						<span id="movieVote0" class="product-grid__price">MDB Vote Rating:</span>
+						<div class="product-grid__extend-wrapper">
+							<div class="product-grid__extend">
+								<p id="movieOverview0" class="product-grid__description">Overview of the movie:</p>
+								<span id="amazonSearch0" class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Amazon search</span>				
+								<span id="googleSearch0" class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end Single product -->
+
+				<div class="product-grid__product-wrapper">
+					<div class="product-grid__product">
+						<div class="product-grid__img-wrapper">			
+							<img id="movieImg1" src="http://www.kevingage.com/assets/clapboard.png" alt="Img" class="product-grid__img" />
+						</div>
+						<span id="movieName1" class="product-grid__title">Movie Title</span>
+						<p></p>
+						<span id="movieVote1" class="product-grid__price">MDB Vote Rating:</span>
+						<div class="product-grid__extend-wrapper">
+							<div class="product-grid__extend">
+								<p id="movieOverview1" class="product-grid__description">Overview of the movie:</p>
+								<span id="amazonSearch1" class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Amazon search</span>				
+								<span  id="googleSearch1" class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="product-grid__product-wrapper">
+					<div class="product-grid__product">
+						<div class="product-grid__img-wrapper">			
+							<img id="movieImg2" src="http://www.kevingage.com/assets/clapboard.png" alt="Img" class="product-grid__img" />
+						</div>
+						<span id="movieName2" class="product-grid__title">Movie title</span>
+						<p></p> 
+						<span id="movieVote2" class="product-grid__price">MDB Vote rating:</span>
+						<div class="product-grid__extend-wrapper">
+							<div class="product-grid__extend">
+								<p id="movieOverview2" class="product-grid__description">Overview of the movie:</p>
+								<span id="amazonSearch2" class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Amazon search</span>				
+								<span  id="googleSearch2" class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="product-grid__product-wrapper">
+					<div class="product-grid__product">
+						<div class="product-grid__img-wrapper">			
+							<img id="movieImg3" src="http://www.kevingage.com/assets/clapboard.png" alt="Img" class="product-grid__img" />
+						</div>
+						<span id="movieName3" class="product-grid__title">Movie title</span>
+						<p></p>
+						<span id="movieVote3" class="product-grid__price">MDB Vote rating:</span>
+						<div class="product-grid__extend-wrapper">
+							<div class="product-grid__extend">
+								<p id="movieOverview3" class="product-grid__description">Overview of the movie:</p>
+								<span id="amazonSearch3" class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Amazon search</span>				
+								<span  id="googleSearch3" class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="product-grid__product-wrapper">
+					<div class="product-grid__product">
+						<div class="product-grid__img-wrapper">			
+							<img id="movieImg4" src="http://www.kevingage.com/assets/clapboard.png" alt="Img" class="product-grid__img" />
+						</div>
+						<span id="movieName4" class="product-grid__title">Movie title</span>
+						<p></p>
+						<span id="movieVote4" class="product-grid__price">MDB Vote rating:</span>
+						<div class="product-grid__extend-wrapper">
+							<div class="product-grid__extend">
+								<p id="movieOverview4" class="product-grid__description">Overview of the movie:</p>
+								<span id="amazonSearch4" class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Amazon search</span>				
+								<span  id="googleSearch4" class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="product-grid__product-wrapper">
+					<div class="product-grid__product">
+						<div class="product-grid__img-wrapper">			
+							<img id="movieImg5"src="http://www.kevingage.com/assets/clapboard.png" alt="Img" class="product-grid__img" />
+						</div>
+						<span id="movieName5" class="product-grid__title">Movie title</span>
+						<p></p>
+						<span id="movieVote5" class="product-grid__price">MDB Vote rating:</span>
+						<div class="product-grid__extend-wrapper">
+							<div class="product-grid__extend">
+								<p id="movieOverview5" class="product-grid__description">Overview of the movie:</p>
+								<span id="amazonSearch5" class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Amazon search</span>				
+								<span  id="googleSearch5" class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="product-grid__product-wrapper">
+					<div class="product-grid__product">
+						<div class="product-grid__img-wrapper">			
+							<img id="movieImg6" src="http://www.kevingage.com/assets/clapboard.png" alt="Img" class="product-grid__img" />
+						</div>
+						<span id="movieName6" class="product-grid__title">Movie title</span>
+						<p></p>
+						<span id="movieVote6" class="product-grid__price">MDB Vote rating:</span>
+						<div class="product-grid__extend-wrapper">
+							<div class="product-grid__extend">
+								<p id="movieOverview6" class="product-grid__description">Overview of the movie:</p>
+								<span id="amazonSearch6" class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Amazon search</span>				
+								<span  id="googleSearch6" class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="product-grid__product-wrapper">
+					<div class="product-grid__product">
+						<div class="product-grid__img-wrapper">			
+							<img id="movieImg7" src="http://www.kevingage.com/assets/clapboard.png" alt="Img" class="product-grid__img" />
+						</div>
+						<span id="movieName7" class="product-grid__title">Movie title</span>
+						<p></p>
+						<span id="movieVote7" class="product-grid__price">MDB Vote rating:</span>
+						<div class="product-grid__extend-wrapper">
+							<div class="product-grid__extend">
+								<p id="movieOverview7" class="product-grid__description">Overview of the movie:</p>
+								<span id="amazonSearch7" class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Amazon search</span>				
+								<span  id="googleSearch7" class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="product-grid__product-wrapper">
+					<div class="product-grid__product">
+						<div class="product-grid__img-wrapper">			
+							<img id="movieImg8" src="http://www.kevingage.com/assets/clapboard.png" alt="Img" class="product-grid__img" />
+						</div>
+						<span id="movieName8" class="product-grid__title">Movie title</span>
+						<p></p>
+						<span id="movieVote8" class="product-grid__price">MDB Vote rating:</span>
+						<div class="product-grid__extend-wrapper">
+							<div class="product-grid__extend">
+								<p id="movieOverview8" class="product-grid__description">Overview of the movie:</p>
+								<span id="amazonSearch8" class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Amazon search</span>				
+								<span  id="googleSearch8" class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</div>
+	</div>
+
+	<footer>
+		Powered by:<a target="_blank" href="https://www.themoviedb.org/"> The Movie DB</a>
+	</footer>
+</div>
+  
+  
+
+</body>
+
+</html>
